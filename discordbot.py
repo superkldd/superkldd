@@ -89,9 +89,14 @@ async def on_message(message):
             await message.channel.send("```" + person[i] + "->" + teamname[i] + "```\n" )
 
     if message.content.startswith("!서버"):
-        file = open("서버.txt")
-        await message.channel.send("```" + file.read() + "```")
-        file.close()
+        await message.channel.send("```" + ﻿ ### 내전: 
+ connect 221.146.166.180:27016; password superbank;
+ ### 내전2: 
+ connect 221.165.42.243:27015; password Kimtaky;
+ ### 1부:
+ connect 15.164.76.8:27015; password grim1234;
+ ### 2부:
+ connect 15.164.76.8:27016; password grim1234; + "```")
 
     if message.content.startswith("!데모"):
         file = open("데모.txt")
