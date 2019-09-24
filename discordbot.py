@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 import asyncio
 import random
@@ -109,5 +110,8 @@ async def on_message(message):
         choiceresult = choice[choicenumber]
         await message.channel.send("```" + choiceresult + "```")
 
-client.run('NTc5NjgxMDI2Njc5MzczODI0.XYkjZA.cFiZwPYjyvleiom--aJU3RV-dzE')
+        
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
+
 
