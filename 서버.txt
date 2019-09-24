@@ -1,0 +1,8 @@
+﻿ ### 내전: 
+ connect 221.146.166.180:27016; password superbank;
+ ### 내전2: 
+ connect 221.165.42.243:27015; password Kimtaky;
+ ### 1부:
+ connect 15.164.76.8:27015; password grim1234;
+ ### 2부:
+ connect 15.164.76.8:27016; password grim1234;
