@@ -1,5 +1,5 @@
 discord.py==1.2.3
-requests==3.7.4
+requests==2.22.0
 asyncio==3.4.3
 client==0.0.1
 ctx==0.1.2
