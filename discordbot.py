@@ -60,12 +60,6 @@ async def on_message(message):
     if message.content.startswith('!룰루'):
         await message.channel.send("```아마도 그는 꼰대라고 인식 되는것 같습니다.```")
 
-    if message.content.startswith('!슈퍼키드'):
-        await message.channel.send("```모카푸꺼```")
-
-    if message.content.startswith('!모카푸'):
-        await message.channel.send("```슈퍼키드꺼```")
-
     if message.content.startswith('!나잌키'):
         await message.channel.send("```아마도 그는 바보라고 인식 되는것 같습니다.```")
 
@@ -121,6 +115,12 @@ async def on_message(message):
     if message.content.startswith('!청소 10'):
         await message.channel.purge(limit=10)
         await message.channel.send("``` 10개의 메시지가 삭제되었습니다..```")
+        
+    if message.content.startswith("!따라해"):
+        memory = message.content[5:]
+        memorychat = memory.split(" ")
+        await message.channel.purge(limit=1)
+        await message.channel.send(memory)
 
        
 
