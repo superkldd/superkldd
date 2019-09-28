@@ -110,9 +110,18 @@ async def on_message(message):
         choiceresult = choice[choicenumber]
         await message.channel.send("```" + choiceresult + "```")
         
-    if message.content.startswith('!청소'):
+    if message.content.startswith('!청소 100'):
         await message.channel.purge(limit=100)
-        await message.channel.send("``` 채팅창 청소 완료 \n 메세지는 최대 100개까지 삭제됩니다.```")
+        await message.channel.send("``` 100개의 메시지가 삭제되었습니다..```")
+        
+    if message.content.startswith('!청소 50'):
+        await message.channel.purge(limit=50)
+        await message.channel.send("``` 50개의 메시지가 삭제되었습니다..```")
+        
+    if message.content.startswith('!청소 10'):
+        await message.channel.purge(limit=10)
+        await message.channel.send("``` 10개의 메시지가 삭제되었습니다..```")
+
        
 
         
