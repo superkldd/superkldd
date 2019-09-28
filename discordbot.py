@@ -109,6 +109,11 @@ async def on_message(message):
         choicenumber = random.randint(1, len(choice) - 1)
         choiceresult = choice[choicenumber]
         await message.channel.send("```" + choiceresult + "```")
+        
+    if message.content.startswith('!청소'):
+        await message.channel.purge(limit=100)
+        await message.channel.send("``` 채팅창 청소 완료 \n 메세지는 최대 100개까지 삭제됩니다.```")
+       
 
         
 access_token = os.environ["BOT_TOKEN"]
