@@ -11,6 +11,10 @@ from json import loads
 
 
 client = discord.Client()
+embed = discord.Embed (title = '이곳을 눌러 바로 이동합니다.',
+                       url = 'https://twitch.tv/dq12345/ ',
+                       description = "twitch/dq12345")
+embed.set_image(url="https://images-ext-2.discordapp.net/external/mr1VNEX5WkEgr9_8WLD-87F4btMF4SAJlNVUwPolQLY/https/static-cdn.jtvnw.net/jtv_user_pictures/e74d8717-d594-44bb-b87a-757eedd7a791-profile_image-300x300.png")
 
 @client.event
 async def on_ready():
@@ -28,6 +32,7 @@ async def on_ready():
         try:
             if loads(response.text)['data'][0]['type'] == 'live' and a == 0:
                 await channel.send("```" + name + " 님이 망하지않고 또다시 방송을 시작하였습니다." + "```")
+                await channel.send(embed=embed)
                 a = 1
         except:
             a = 0
